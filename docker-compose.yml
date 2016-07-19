@@ -1,0 +1,19 @@
+youtrend:
+    build: .
+    links:
+        - mongodb
+        - redis
+    environment:
+        - GO_ROUTINE_REDIS_CONSUMERS=10
+
+redis:
+    image: redis:latest
+    ports:
+        - 6739:6739
+
+mongodb:
+    image: tutum/mongodb:latest
+    environment:
+        - AUTH=no
+    ports:
+        - 28017:28017
