@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-deps=( "gopkg.in/redis.v2" "gopkg.in/mgo.v2" "gopkg.in/mgo.v2/bson")
+deps=( "gopkg.in/redis.v2" "gopkg.in/mgo.v2" "gopkg.in/mgo.v2/bson" "github.com/montanaflynn/stats" "golang.org/x/net/html")
 
 echo "Getting project dependencies"
 for dep in $deps; do
